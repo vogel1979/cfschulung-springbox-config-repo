@@ -6,3 +6,11 @@ eureka:
   client:    # <--- ADD THE CLIENT SECTION!!!
     serviceUrl:
       defaultZone: ${vcap.services.springbox-service-registry-mn.credentials.uri:http://127.0.0.1:8761}/eureka/
+      
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80      
