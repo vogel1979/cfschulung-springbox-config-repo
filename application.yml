@@ -1,5 +1,3 @@
-greeting: Ohai
-
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
